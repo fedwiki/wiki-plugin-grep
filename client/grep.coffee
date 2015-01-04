@@ -8,6 +8,12 @@ escape = (line) ->
 parse = (text) ->
   escape(text).replace /\n/, '<br>'
 
+want = (page) ->
+  for item in page.story
+    if item.type is 'paragraph'
+      return true if item.text.match /<h3>/
+  false
+
 run = ($item) ->
 
   status = (text) ->
@@ -15,9 +21,18 @@ run = ($item) ->
 
   status "waiting for sitemap"
   $.getJSON "http://#{location.host}/system/sitemap.json", (sitemap) ->
-    status "#{sitemap.length} pages to process"
-    text = ("[[#{each.title}]]" for each in sitemap).join "<br>\n"
-    $item.append wiki.resolveLinks text, (text) -> text
+    checked = 0
+    found = 0
+    for place in sitemap
+      $.getJSON "http://#{location.host}/#{place.slug}.json", (page) ->
+        text = "[[#{page.title}]] (#{page.story.length})"
+        if want page
+          found++
+          $item.append "#{wiki.resolveLinks text}<br>"
+        checked++
+        report = "#{found} of #{checked} pages found"
+        report += ", #{sitemap.length - checked} remain" if checked < sitemap.length
+        status report
 
 emit = ($item, item) ->
   $item.append """
