@@ -11,7 +11,7 @@ parse = (text) ->
 want = (page) ->
   for item in page.story
     if item.type is 'paragraph'
-      return true if item.text.match /<h3>/
+      return true if item.text.match /<\/?[A-Za-z].*?>/
   false
 
 run = ($item) ->
@@ -30,7 +30,7 @@ run = ($item) ->
           found++
           $item.append "#{wiki.resolveLinks text}<br>"
         checked++
-        report = "#{found} of #{checked} pages found"
+        report = "found #{found} pages of #{checked} checked"
         report += ", #{sitemap.length - checked} remain" if checked < sitemap.length
         status report
 
