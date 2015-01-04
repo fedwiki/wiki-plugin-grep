@@ -6,8 +6,8 @@ expect = require 'expect.js'
 
 describe 'grep plugin', ->
 
-  describe 'expand', ->
+  describe 'parse', ->
 
-    it 'can make itallic', ->
-      result = grep.expand 'hello *world*'
-      expect(result).to.be 'hello <i>world</i>'
+    # it 'can make itallic', ->
+    #   result = grep.expand 'hello *world*'
+    #   expect(result).to.be 'hello <i>world</i>'
