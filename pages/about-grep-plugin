@@ -1,0 +1,37 @@
+{
+  "title": "About Grep Plugin",
+  "story": [
+  {
+    "type": "paragraph",
+    "id": "044d48666a4137e0",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "grep",
+    "id": "aba1e6d903891ed3",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+],
+  "journal": [
+  {
+    "type": "create",
+    "item": {
+      "title": "About Grep Plugin",
+      "story": [
+  {
+    "type": "paragraph",
+    "id": "044d48666a4137e0",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "grep",
+    "id": "aba1e6d903891ed3",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+]
+    },
+    "date": 1420382874000,
+    "certificate": "from mkplugin.sh"
+  }
+]
+}
