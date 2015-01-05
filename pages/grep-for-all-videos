@@ -1,0 +1,150 @@
+{
+  "title": "Grep for All Videos",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "fbe4df68becebb5e",
+      "text": "Find all pages with videos. Our search markup says to look at every item on every page and make links to those pages that have items of type video."
+    },
+    {
+      "type": "paragraph",
+      "id": "4b31a0dcd91668e4",
+      "text": "See [[About Video Plugin]]"
+    },
+    {
+      "type": "grep",
+      "id": "aba1e6d903891ed3",
+      "text": "ITEM video"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Grep for All Videos",
+        "story": []
+      },
+      "date": 1420426684147
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "This is text in the new plugin. You can *double-click* to edit it too."
+      },
+      "id": "aba1e6d903891ed3",
+      "date": 1420426694462
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "fbe4df68becebb5e"
+      },
+      "id": "fbe4df68becebb5e",
+      "type": "add",
+      "after": "aba1e6d903891ed3",
+      "date": 1420426801437
+    },
+    {
+      "type": "edit",
+      "id": "fbe4df68becebb5e",
+      "item": {
+        "type": "paragraph",
+        "id": "fbe4df68becebb5e",
+        "text": "Find all pages that have story items that are videos."
+      },
+      "date": 1420426831701
+    },
+    {
+      "type": "move",
+      "order": [
+        "fbe4df68becebb5e",
+        "aba1e6d903891ed3"
+      ],
+      "id": "fbe4df68becebb5e",
+      "date": 1420426834809
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEMS videos"
+      },
+      "date": 1420426853778
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEMS video"
+      },
+      "date": 1420426859847
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM video"
+      },
+      "date": 1420426865772
+    },
+    {
+      "type": "edit",
+      "id": "fbe4df68becebb5e",
+      "item": {
+        "type": "paragraph",
+        "id": "fbe4df68becebb5e",
+        "text": "Find all pages videos. Our markup says to look at every item on every page and make links to those that are of type 'video'."
+      },
+      "date": 1420427005475
+    },
+    {
+      "type": "add",
+      "id": "4b31a0dcd91668e4",
+      "item": {
+        "type": "paragraph",
+        "id": "4b31a0dcd91668e4",
+        "text": "See [[About Video Plugin]]"
+      },
+      "after": "fbe4df68becebb5e",
+      "date": 1420427017329
+    },
+    {
+      "type": "edit",
+      "id": "fbe4df68becebb5e",
+      "item": {
+        "type": "paragraph",
+        "id": "fbe4df68becebb5e",
+        "text": "Find all pages videos. Our markup says to look at every item on every page and make links to those pages that have items of type video."
+      },
+      "date": 1420427045858
+    },
+    {
+      "type": "edit",
+      "id": "fbe4df68becebb5e",
+      "item": {
+        "type": "paragraph",
+        "id": "fbe4df68becebb5e",
+        "text": "Find all pages with videos. Our markup says to look at every item on every page and make links to those pages that have items of type video."
+      },
+      "date": 1420429513909
+    },
+    {
+      "type": "edit",
+      "id": "fbe4df68becebb5e",
+      "item": {
+        "type": "paragraph",
+        "id": "fbe4df68becebb5e",
+        "text": "Find all pages with videos. Our search markup says to look at every item on every page and make links to those pages that have items of type video."
+      },
+      "date": 1420429526520
+    }
+  ]
+}

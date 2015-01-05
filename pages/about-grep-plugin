@@ -1,37 +1,257 @@
 {
   "title": "About Grep Plugin",
   "story": [
-  {
-    "type": "paragraph",
-    "id": "044d48666a4137e0",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "grep",
-    "id": "aba1e6d903891ed3",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-],
-  "journal": [
-  {
-    "type": "create",
-    "item": {
-      "title": "About Grep Plugin",
-      "story": [
-  {
-    "type": "paragraph",
-    "id": "044d48666a4137e0",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "grep",
-    "id": "aba1e6d903891ed3",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "044d48666a4137e0",
+      "text": "This plugin retrieves all pages from the origin server and creates links to those that satisfy conditions specified by a specialized markup. See [[About Grep Markup]]"
     },
-    "date": 1420382874000,
-    "certificate": "from mkplugin.sh"
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "b4c8615f53245ece",
+      "text": "The name grep goes back to the dawn of software tools as a metaphor for computing. Ken Thompson extracted the search processor from a text editor and inserted it into a tool that would search all file together. [http://en.wikipedia.org/wiki/Grep wikipedia]"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ee19086ebde9810",
+      "text": "[[Grep for All Videos]] that use the new video plugin."
+    },
+    {
+      "type": "paragraph",
+      "id": "cfd3b4f1c04515f6",
+      "text": "Grep is especially useful for maintaining large sites where writing practices or markup conventions are changing. We've endured two of these in 2014 as we've made wiki safe from malicious html."
+    },
+    {
+      "type": "paragraph",
+      "id": "fd764099bb76b3bd",
+      "text": "[[Grep for Obsolete Videos]] using iframe codes."
+    },
+    {
+      "type": "paragraph",
+      "id": "2fd6a00c26dc5c4c",
+      "text": "[[Grep for Obsolete HTML]] used as text markup."
+    },
+    {
+      "type": "paragraph",
+      "id": "0fdf249973538f0e",
+      "text": "This plugin can also search through the history stored in each page's journal. This can be used to find some text that has gone missing or to find pages that have come from somewhere else."
+    },
+    {
+      "type": "paragraph",
+      "id": "de94906c8f4fc5df",
+      "text": "[[Grep for Forked Pages]] from another site."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Grep Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "044d48666a4137e0",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "grep",
+            "id": "aba1e6d903891ed3",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1420382874000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "044d48666a4137e0",
+      "item": {
+        "type": "paragraph",
+        "id": "044d48666a4137e0",
+        "text": "This plugin retrieves all pages from the origin server and creates links to those that satisfy conditions specified by a specialized markup."
+      },
+      "date": 1420426142434
+    },
+    {
+      "type": "add",
+      "id": "b4c8615f53245ece",
+      "item": {
+        "type": "paragraph",
+        "id": "b4c8615f53245ece",
+        "text": "The name grep goes back to the dawn of the notion of software tools. "
+      },
+      "after": "044d48666a4137e0",
+      "date": 1420426343003
+    },
+    {
+      "type": "edit",
+      "id": "b4c8615f53245ece",
+      "item": {
+        "type": "paragraph",
+        "id": "b4c8615f53245ece",
+        "text": "The name grep goes back to the dawn of software tools as a metaphor for computing. Ken Thompson extracted the search processor from a text editor and inserted it into a tool that would search all file together. [http://en.wikipedia.org/wiki/Grep wikipedia]"
+      },
+      "date": 1420426548150
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1ee19086ebde9810"
+      },
+      "id": "1ee19086ebde9810",
+      "type": "add",
+      "after": "aba1e6d903891ed3",
+      "date": 1420426631487
+    },
+    {
+      "type": "edit",
+      "id": "1ee19086ebde9810",
+      "item": {
+        "type": "paragraph",
+        "id": "1ee19086ebde9810",
+        "text": "[[Grep for All Videos]]"
+      },
+      "date": 1420426665624
+    },
+    {
+      "type": "remove",
+      "id": "aba1e6d903891ed3",
+      "date": 1420426694459
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cfd3b4f1c04515f6"
+      },
+      "id": "cfd3b4f1c04515f6",
+      "type": "add",
+      "after": "1ee19086ebde9810",
+      "date": 1420428842473
+    },
+    {
+      "type": "edit",
+      "id": "cfd3b4f1c04515f6",
+      "item": {
+        "type": "paragraph",
+        "id": "cfd3b4f1c04515f6",
+        "text": "Grep is especially useful for maintaining large sites where writing practices or markup conventions are changing. We've endured two of these in 2014 as we've made wiki safe from malicious html."
+      },
+      "date": 1420429005164
+    },
+    {
+      "type": "add",
+      "id": "fd764099bb76b3bd",
+      "item": {
+        "type": "paragraph",
+        "id": "fd764099bb76b3bd",
+        "text": "[[Grep for "
+      },
+      "after": "cfd3b4f1c04515f6",
+      "date": 1420429056072
+    },
+    {
+      "type": "edit",
+      "id": "fd764099bb76b3bd",
+      "item": {
+        "type": "paragraph",
+        "id": "fd764099bb76b3bd",
+        "text": "[[Grep for Obsolete Embedded Videos]]"
+      },
+      "date": 1420429356382
+    },
+    {
+      "type": "edit",
+      "id": "fd764099bb76b3bd",
+      "item": {
+        "type": "paragraph",
+        "id": "fd764099bb76b3bd",
+        "text": "[[Grep for Obsolete Videos]]"
+      },
+      "date": 1420429380222
+    },
+    {
+      "type": "edit",
+      "id": "1ee19086ebde9810",
+      "item": {
+        "type": "paragraph",
+        "id": "1ee19086ebde9810",
+        "text": "[[Grep for All Videos]] using the video plugin."
+      },
+      "date": 1420429412279
+    },
+    {
+      "type": "edit",
+      "id": "fd764099bb76b3bd",
+      "item": {
+        "type": "paragraph",
+        "id": "fd764099bb76b3bd",
+        "text": "[[Grep for Obsolete Videos]] using iframe codes."
+      },
+      "date": 1420429467913
+    },
+    {
+      "type": "add",
+      "id": "2fd6a00c26dc5c4c",
+      "item": {
+        "type": "paragraph",
+        "id": "2fd6a00c26dc5c4c",
+        "text": "[[Grep for Obsolete HTML]] used for any markup."
+      },
+      "after": "fd764099bb76b3bd",
+      "date": 1420430029562
+    },
+    {
+      "type": "edit",
+      "id": "2fd6a00c26dc5c4c",
+      "item": {
+        "type": "paragraph",
+        "id": "2fd6a00c26dc5c4c",
+        "text": "[[Grep for Obsolete HTML]] used as text markup."
+      },
+      "date": 1420430057649
+    },
+    {
+      "type": "edit",
+      "id": "1ee19086ebde9810",
+      "item": {
+        "type": "paragraph",
+        "id": "1ee19086ebde9810",
+        "text": "[[Grep for All Videos]] that use the new video plugin."
+      },
+      "date": 1420430443424
+    },
+    {
+      "type": "add",
+      "id": "0fdf249973538f0e",
+      "item": {
+        "type": "paragraph",
+        "id": "0fdf249973538f0e",
+        "text": "This plugin can also search through the history stored in each page's journal. This can be used to find some text that has gone missing or to find pages that have come from somewhere else."
+      },
+      "after": "2fd6a00c26dc5c4c",
+      "date": 1420430784369
+    },
+    {
+      "type": "add",
+      "id": "de94906c8f4fc5df",
+      "item": {
+        "type": "paragraph",
+        "id": "de94906c8f4fc5df",
+        "text": "[[Grep for Forked Pages]] from another site."
+      },
+      "after": "0fdf249973538f0e",
+      "date": 1420430882554
+    },
+    {
+      "type": "edit",
+      "id": "044d48666a4137e0",
+      "item": {
+        "type": "paragraph",
+        "id": "044d48666a4137e0",
+        "text": "This plugin retrieves all pages from the origin server and creates links to those that satisfy conditions specified by a specialized markup. See [[About Grep Markup]]"
+      },
+      "date": 1420431687095
+    }
+  ]
 }

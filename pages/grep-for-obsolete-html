@@ -1,0 +1,91 @@
+{
+  "title": "Grep for Obsolete HTML",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "5e2577b7f3de018b",
+      "text": "Find all pages with now obsolete html tags mixed in with ordinary paragraphs. Such paragraphs can be rewritten to not use tags or can be converted to a special html plugin where tags are allowed."
+    },
+    {
+      "type": "paragraph",
+      "id": "8b3b08eef22cdbf4",
+      "text": "See [[About HTML Plugin]]"
+    },
+    {
+      "type": "grep",
+      "id": "aba1e6d903891ed3",
+      "text": "ITEM paragraph\nTEXT </?\\w+.*?>"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Grep for Obsolete HTML",
+        "story": []
+      },
+      "date": 1420430076984
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e2577b7f3de018b"
+      },
+      "id": "5e2577b7f3de018b",
+      "type": "add",
+      "date": 1420430079243
+    },
+    {
+      "type": "edit",
+      "id": "5e2577b7f3de018b",
+      "item": {
+        "type": "paragraph",
+        "id": "5e2577b7f3de018b",
+        "text": "Find all pages with now obsolete html tags mixed in with ordinary paragraphs. Such paragraphs can be rewritten to not use tags or can be converted to a special html plugin where tags are allowed."
+      },
+      "date": 1420430299357
+    },
+    {
+      "type": "add",
+      "id": "8b3b08eef22cdbf4",
+      "item": {
+        "type": "paragraph",
+        "id": "8b3b08eef22cdbf4",
+        "text": "See [[About Html Plugin]]"
+      },
+      "after": "5e2577b7f3de018b",
+      "date": 1420430312488
+    },
+    {
+      "type": "edit",
+      "id": "8b3b08eef22cdbf4",
+      "item": {
+        "type": "paragraph",
+        "id": "8b3b08eef22cdbf4",
+        "text": "See [[About HTML Plugin]]"
+      },
+      "date": 1420430322605
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM paragraph\nTEXT <iframe"
+      },
+      "after": "8b3b08eef22cdbf4",
+      "id": "aba1e6d903891ed3",
+      "date": 1420430336246
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM paragraph\nTEXT </?\\w+.*?>"
+      },
+      "date": 1420430403232
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "title": "About Grep Markup",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "83932539d577f870",
+      "text": "The Grep Plugin uses a specialized markup that requires some familiarity with how wiki pages are stored and also familiarity with regular expression searches in order to use the plugin to its fullest."
+    },
+    {
+      "type": "paragraph",
+      "id": "3e5ff90c65a0fa91",
+      "text": "The plugin documentation includes many samples of useful searches that can be used without writing new markup."
+    },
+    {
+      "type": "paragraph",
+      "id": "f8f6978002a99c62",
+      "text": "See [[About Grep Plugin]]"
+    },
+    {
+      "type": "markdown",
+      "id": "aca96cb73989c407",
+      "text": "# Markup"
+    },
+    {
+      "type": "paragraph",
+      "id": "157868c838c33a28",
+      "text": "The plugin is configured with commands, one per line, that describe where on a page to look and then what text is to be found."
+    },
+    {
+      "type": "markdown",
+      "id": "3f24a8ced0f09e24",
+      "text": "Say __ITEM__ _type_ to look in story items of that type."
+    },
+    {
+      "type": "markdown",
+      "id": "6ad1523ec2f5b0f4",
+      "text": "Say __ACTION__ _type_ to look in journal actions of that type."
+    },
+    {
+      "type": "paragraph",
+      "id": "2e40362e882a7bf0",
+      "text": "Item types are the plugin name in lower case. Action types are create, add, delete, edit, move and fork."
+    },
+    {
+      "type": "paragraph",
+      "id": "115a4f90bb85dfe6",
+      "text": "If no type is specified then all items or all actions are searched. Without an ITEM or ACTION command only the title of pages will be searched."
+    },
+    {
+      "type": "paragraph",
+      "id": "e8c267cd812ff85d",
+      "text": "Without further markup the plugin will find all pages with the type of items or actions specified. To be more selective apply a pattern match to text within the objects."
+    },
+    {
+      "type": "markdown",
+      "id": "2ff11389ff9c0252",
+      "text": "Say __TEXT__ _pattern_ to match the item's text."
+    },
+    {
+      "type": "markdown",
+      "id": "8ae7936615d27cdb",
+      "text": "Say __SITE__ _pattern_ to match the action's remote site."
+    },
+    {
+      "type": "markdown",
+      "id": "3dad0991d0467aa9",
+      "text": "Say __TITLE__ _pattern_ to match the page's title."
+    },
+    {
+      "type": "paragraph",
+      "id": "2f5c45633d9afd18",
+      "text": "The pattern is formed by ordinary characters to be matched along with some special characters that add more options to the search."
+    },
+    {
+      "type": "code",
+      "id": "e8cf912dd5dea591",
+      "text": "   ^  .  ?  *  [  ]  (  )  {  }  |  \\  $"
+    },
+    {
+      "type": "paragraph",
+      "id": "d9ede14ad2682d82",
+      "text": "Avoid these characters for a simple search. Learn more about regular expression matching for more complicated searches. [http://en.wikipedia.org/wiki/Regular_expression wikipedia]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Grep Markup",
+        "story": []
+      },
+      "date": 1420431696547
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "83932539d577f870"
+      },
+      "id": "83932539d577f870",
+      "type": "add",
+      "date": 1420431699169
+    },
+    {
+      "type": "edit",
+      "id": "83932539d577f870",
+      "item": {
+        "type": "paragraph",
+        "id": "83932539d577f870",
+        "text": "The Grep Plugin uses a specialized markup that requires some familiarity with how wiki pages are stored and also familiarity with regular expression searches in order to use the plugin to its fullest."
+      },
+      "date": 1420431799192
+    },
+    {
+      "type": "add",
+      "id": "3e5ff90c65a0fa91",
+      "item": {
+        "type": "paragraph",
+        "id": "3e5ff90c65a0fa91",
+        "text": "The plugin documentation includes many samples of useful searches that can be used without writing new markup."
+      },
+      "after": "83932539d577f870",
+      "date": 1420431897307
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f8f6978002a99c62"
+      },
+      "id": "f8f6978002a99c62",
+      "type": "add",
+      "after": "3e5ff90c65a0fa91",
+      "date": 1420431899970
+    },
+    {
+      "type": "edit",
+      "id": "f8f6978002a99c62",
+      "item": {
+        "type": "paragraph",
+        "id": "f8f6978002a99c62",
+        "text": "See [[About Grep Plugin]]"
+      },
+      "date": 1420431911944
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aca96cb73989c407"
+      },
+      "id": "aca96cb73989c407",
+      "type": "add",
+      "after": "f8f6978002a99c62",
+      "date": 1420431915030
+    },
+    {
+      "type": "edit",
+      "id": "aca96cb73989c407",
+      "item": {
+        "type": "markdown",
+        "id": "aca96cb73989c407",
+        "text": "# Markup"
+      },
+      "date": 1420431934369
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "157868c838c33a28"
+      },
+      "id": "157868c838c33a28",
+      "type": "add",
+      "after": "aca96cb73989c407",
+      "date": 1420431937093
+    },
+    {
+      "type": "edit",
+      "id": "157868c838c33a28",
+      "item": {
+        "type": "paragraph",
+        "id": "157868c838c33a28",
+        "text": "The plugin is configured with commands, one per line, that describe where on a page to look and then what text is to be found."
+      },
+      "date": 1420432095713
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3f24a8ced0f09e24"
+      },
+      "id": "3f24a8ced0f09e24",
+      "type": "add",
+      "after": "157868c838c33a28",
+      "date": 1420432165365
+    },
+    {
+      "type": "edit",
+      "id": "3f24a8ced0f09e24",
+      "item": {
+        "type": "markdown",
+        "id": "3f24a8ced0f09e24",
+        "text": "Say __ITEM__ _sometype_ to look in items of that type."
+      },
+      "date": 1420432234294
+    },
+    {
+      "type": "edit",
+      "id": "3f24a8ced0f09e24",
+      "item": {
+        "type": "markdown",
+        "id": "3f24a8ced0f09e24",
+        "text": "Say __ITEM__ _sometype_ to look in story items of that type."
+      },
+      "date": 1420432251725
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6ad1523ec2f5b0f4"
+      },
+      "id": "6ad1523ec2f5b0f4",
+      "type": "add",
+      "after": "3f24a8ced0f09e24",
+      "date": 1420432253969
+    },
+    {
+      "type": "edit",
+      "id": "6ad1523ec2f5b0f4",
+      "item": {
+        "type": "markdown",
+        "id": "6ad1523ec2f5b0f4",
+        "text": "Say __ACTION__ _sometime_ to look in journal actions of that type."
+      },
+      "date": 1420432292736
+    },
+    {
+      "type": "edit",
+      "id": "3f24a8ced0f09e24",
+      "item": {
+        "type": "markdown",
+        "id": "3f24a8ced0f09e24",
+        "text": "Say __ITEM__ _type_ to look in story items of that type."
+      },
+      "date": 1420432336356
+    },
+    {
+      "type": "edit",
+      "id": "6ad1523ec2f5b0f4",
+      "item": {
+        "type": "markdown",
+        "id": "6ad1523ec2f5b0f4",
+        "text": "Say __ACTION__ _type_ to look in journal actions of that type."
+      },
+      "date": 1420432348213
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2e40362e882a7bf0"
+      },
+      "id": "2e40362e882a7bf0",
+      "type": "add",
+      "after": "6ad1523ec2f5b0f4",
+      "date": 1420432401919
+    },
+    {
+      "type": "edit",
+      "id": "2e40362e882a7bf0",
+      "item": {
+        "type": "paragraph",
+        "id": "2e40362e882a7bf0",
+        "text": "Item types are the plugin name in lower case. Action types are create, add, delete, edit, move and fork."
+      },
+      "date": 1420432445576
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "115a4f90bb85dfe6"
+      },
+      "id": "115a4f90bb85dfe6",
+      "type": "add",
+      "after": "2e40362e882a7bf0",
+      "date": 1420432473357
+    },
+    {
+      "type": "edit",
+      "id": "115a4f90bb85dfe6",
+      "item": {
+        "type": "paragraph",
+        "id": "115a4f90bb85dfe6",
+        "text": "If no type is specified then all items or all actions are searched. Without an ITEM or ACTION command only the title of pages will be searched."
+      },
+      "date": 1420432583133
+    },
+    {
+      "type": "add",
+      "id": "e8c267cd812ff85d",
+      "item": {
+        "type": "paragraph",
+        "id": "e8c267cd812ff85d",
+        "text": "Without further markup the plugin will find all pages with the type of items or actions specified. To be more selective apply a pattern match to the text within the objects."
+      },
+      "after": "115a4f90bb85dfe6",
+      "date": 1420433260489
+    },
+    {
+      "type": "edit",
+      "id": "e8c267cd812ff85d",
+      "item": {
+        "type": "paragraph",
+        "id": "e8c267cd812ff85d",
+        "text": "Without further markup the plugin will find all pages with the type of items or actions specified. To be more selective apply a pattern match to text within the objects."
+      },
+      "date": 1420433310383
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2ff11389ff9c0252"
+      },
+      "id": "2ff11389ff9c0252",
+      "type": "add",
+      "after": "e8c267cd812ff85d",
+      "date": 1420433315747
+    },
+    {
+      "type": "edit",
+      "id": "2ff11389ff9c0252",
+      "item": {
+        "type": "markdown",
+        "id": "2ff11389ff9c0252",
+        "text": "Say __TEXT__ _pattern_ to match the item's text."
+      },
+      "date": 1420433412758
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3dad0991d0467aa9"
+      },
+      "id": "3dad0991d0467aa9",
+      "type": "add",
+      "after": "2ff11389ff9c0252",
+      "date": 1420433416361
+    },
+    {
+      "type": "edit",
+      "id": "3dad0991d0467aa9",
+      "item": {
+        "type": "markdown",
+        "id": "3dad0991d0467aa9",
+        "text": "Say __TITLE__ _pattern_ to match the page's title."
+      },
+      "date": 1420433458568
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8ae7936615d27cdb"
+      },
+      "id": "8ae7936615d27cdb",
+      "type": "add",
+      "after": "3dad0991d0467aa9",
+      "date": 1420433480048
+    },
+    {
+      "type": "edit",
+      "id": "8ae7936615d27cdb",
+      "item": {
+        "type": "markdown",
+        "id": "8ae7936615d27cdb",
+        "text": "Say __SITE__ _pattern_ to match the action's remote site."
+      },
+      "date": 1420433526052
+    },
+    {
+      "type": "move",
+      "order": [
+        "83932539d577f870",
+        "3e5ff90c65a0fa91",
+        "f8f6978002a99c62",
+        "aca96cb73989c407",
+        "157868c838c33a28",
+        "3f24a8ced0f09e24",
+        "6ad1523ec2f5b0f4",
+        "2e40362e882a7bf0",
+        "115a4f90bb85dfe6",
+        "e8c267cd812ff85d",
+        "2ff11389ff9c0252",
+        "8ae7936615d27cdb",
+        "3dad0991d0467aa9"
+      ],
+      "id": "8ae7936615d27cdb",
+      "date": 1420433531422
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2f5c45633d9afd18"
+      },
+      "id": "2f5c45633d9afd18",
+      "type": "add",
+      "after": "3dad0991d0467aa9",
+      "date": 1420433540549
+    },
+    {
+      "type": "edit",
+      "id": "2f5c45633d9afd18",
+      "item": {
+        "type": "paragraph",
+        "id": "2f5c45633d9afd18",
+        "text": "The pattern is formed by ordinary characters to be matched along with some special characters that add more options to the search. These characters are:"
+      },
+      "date": 1420433784121
+    },
+    {
+      "type": "add",
+      "id": "7648719dd278318f",
+      "item": {
+        "type": "paragraph",
+        "id": "7648719dd278318f",
+        "text": "Dot . matches one character."
+      },
+      "after": "2f5c45633d9afd18",
+      "date": 1420433827035
+    },
+    {
+      "type": "remove",
+      "id": "7648719dd278318f",
+      "date": 1420433840293
+    },
+    {
+      "type": "edit",
+      "id": "2f5c45633d9afd18",
+      "item": {
+        "type": "paragraph",
+        "id": "2f5c45633d9afd18",
+        "text": "The pattern is formed by ordinary characters to be matched along with some special characters that add more options to the search."
+      },
+      "date": 1420433857953
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e8cf912dd5dea591"
+      },
+      "id": "e8cf912dd5dea591",
+      "type": "add",
+      "after": "2f5c45633d9afd18",
+      "date": 1420433859909
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": ".  ?  *  [  ]  \\"
+      },
+      "date": 1420433956863
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "      .  ?  *  [  ]  \\"
+      },
+      "date": 1420433963923
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "   .  ?  *  [  ]  \\"
+      },
+      "date": 1420433984362
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "   .  ?  *  [  ]  (   )   \\"
+      },
+      "date": 1420434007246
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "   .  ?  *  [  ]  (  )  \\"
+      },
+      "date": 1420434016669
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d9ede14ad2682d82"
+      },
+      "id": "d9ede14ad2682d82",
+      "type": "add",
+      "after": "e8cf912dd5dea591",
+      "date": 1420434105404
+    },
+    {
+      "type": "edit",
+      "id": "d9ede14ad2682d82",
+      "item": {
+        "type": "paragraph",
+        "id": "d9ede14ad2682d82",
+        "text": "Avoid these characters for a simple search. Learn more about regular expression matching for more complicated searches."
+      },
+      "date": 1420434184213
+    },
+    {
+      "type": "edit",
+      "id": "d9ede14ad2682d82",
+      "item": {
+        "type": "paragraph",
+        "id": "d9ede14ad2682d82",
+        "text": "Avoid these characters for a simple search. Learn more about regular expression matching for more complicated searches. [http://en.wikipedia.org/wiki/Regular_expression wikipedia]"
+      },
+      "date": 1420434284623
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "   .  ?  *  [  ]  (  )  {  }  |  \\"
+      },
+      "date": 1420434312486
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7aa7302a549a8bbe"
+      },
+      "id": "7aa7302a549a8bbe",
+      "type": "add",
+      "after": "d9ede14ad2682d82",
+      "date": 1420434490843
+    },
+    {
+      "type": "edit",
+      "id": "7aa7302a549a8bbe",
+      "item": {
+        "type": "markdown",
+        "id": "7aa7302a549a8bbe",
+        "text": "__  .  ?  *  [  ]  (  )  {  }  |  \\ __"
+      },
+      "date": 1420434502443
+    },
+    {
+      "type": "edit",
+      "id": "7aa7302a549a8bbe",
+      "item": {
+        "type": "markdown",
+        "id": "7aa7302a549a8bbe",
+        "text": " __  .  ?  *  [  ]  (  )  {  }  |  \\ __"
+      },
+      "date": 1420434521436
+    },
+    {
+      "type": "edit",
+      "id": "7aa7302a549a8bbe",
+      "item": {
+        "type": "markdown",
+        "id": "7aa7302a549a8bbe",
+        "text": "**  .  ?  *  [  ]  (  )  {  }  |  \\ **"
+      },
+      "date": 1420434535218
+    },
+    {
+      "type": "remove",
+      "id": "7aa7302a549a8bbe",
+      "date": 1420434555908
+    },
+    {
+      "type": "edit",
+      "id": "e8cf912dd5dea591",
+      "item": {
+        "type": "code",
+        "id": "e8cf912dd5dea591",
+        "text": "   ^  .  ?  *  [  ]  (  )  {  }  |  \\  $"
+      },
+      "date": 1420434973645
+    }
+  ]
+}

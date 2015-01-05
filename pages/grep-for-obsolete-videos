@@ -1,0 +1,91 @@
+{
+  "title": "Grep for Obsolete Videos",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "43548c3d63c64b1d",
+      "text": "Find all pages with now obsolete iframe embed codes. These pages can be modified to again show videos by adding a video plugin and programming it with the video key buried in the original html."
+    },
+    {
+      "type": "paragraph",
+      "id": "8938404d5cf0c666",
+      "text": "See [[About Video Plugin]]"
+    },
+    {
+      "type": "grep",
+      "id": "aba1e6d903891ed3",
+      "text": "ITEM paragraph\nTEXT <iframe"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Grep for Obsolete Videos",
+        "story": []
+      },
+      "date": 1420429479504
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "43548c3d63c64b1d"
+      },
+      "id": "43548c3d63c64b1d",
+      "type": "add",
+      "date": 1420429482027
+    },
+    {
+      "type": "edit",
+      "id": "43548c3d63c64b1d",
+      "item": {
+        "type": "paragraph",
+        "id": "43548c3d63c64b1d",
+        "text": "Find all pages with now obsolete iframe embed codes. These pages can be modified to again show videos by adding a video plugin and programming it with the video key buried in the original html."
+      },
+      "date": 1420429885359
+    },
+    {
+      "type": "add",
+      "id": "8938404d5cf0c666",
+      "item": {
+        "type": "paragraph",
+        "id": "8938404d5cf0c666",
+        "text": "See [[About Video Plugin]]"
+      },
+      "after": "43548c3d63c64b1d",
+      "date": 1420429896642
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM video"
+      },
+      "after": "43548c3d63c64b1d",
+      "id": "aba1e6d903891ed3",
+      "date": 1420429916105
+    },
+    {
+      "type": "move",
+      "order": [
+        "43548c3d63c64b1d",
+        "8938404d5cf0c666",
+        "aba1e6d903891ed3"
+      ],
+      "id": "aba1e6d903891ed3",
+      "date": 1420429922943
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM paragraph\nTEXT <iframe"
+      },
+      "date": 1420429944240
+    }
+  ]
+}

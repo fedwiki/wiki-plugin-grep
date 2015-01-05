@@ -1,0 +1,65 @@
+{
+  "title": "Grep for Forked Pages",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b1da666aeb7e63a9",
+      "text": "Find all pages from another place. This search markup looks for the fork actions that mention all or part of another site's domain name."
+    },
+    {
+      "type": "grep",
+      "id": "aba1e6d903891ed3",
+      "text": "ACTION fork\nSITE fed.wiki.org"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Grep for Forked Pages",
+        "story": []
+      },
+      "date": 1420430900927
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b1da666aeb7e63a9"
+      },
+      "id": "b1da666aeb7e63a9",
+      "type": "add",
+      "date": 1420430907701
+    },
+    {
+      "type": "edit",
+      "id": "b1da666aeb7e63a9",
+      "item": {
+        "type": "paragraph",
+        "id": "b1da666aeb7e63a9",
+        "text": "Find all pages from another place. This search markup looks for the fork actions that mention all or part of another site's domain name."
+      },
+      "date": 1420431044079
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ITEM paragraph\nTEXT <iframe"
+      },
+      "after": "b1da666aeb7e63a9",
+      "id": "aba1e6d903891ed3",
+      "date": 1420431052058
+    },
+    {
+      "type": "edit",
+      "id": "aba1e6d903891ed3",
+      "item": {
+        "type": "grep",
+        "id": "aba1e6d903891ed3",
+        "text": "ACTION fork\nSITE fed.wiki.org"
+      },
+      "date": 1420431093598
+    }
+  ]
+}
