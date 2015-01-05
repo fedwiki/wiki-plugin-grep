@@ -5,21 +5,72 @@ escape = (line) ->
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
 
-parse = (text) ->
-  escape(text).replace /\n/, '<br>'
+word = (string) ->
+  throw {message:"expecting type for '#{string}'"} unless string.match /^[a-z]*$/
+  string
 
-want = (page) ->
-  for item in page.story
-    if item.type is 'paragraph'
-      return true if item.text.match /<\/?[A-Za-z].*?>/
+parse = (text) ->
+  program = []
+  listing = []
+  errors = 0
+  for line in text.split("\n")
+    html = escape line
+    try
+      [match, op, arg] = line.match(/^\s*(\w*)\s*(.*)$/)
+      switch op
+        when '' then
+        when 'ITEM','ACTION' then program.push {op, type:word(arg)}
+        when 'TEXT','TITLE','SITE' then program.push {op, regex: new RegExp(arg,'mi')}
+        else throw {message:"don't know '#{op}' command"}
+    catch err
+      errors++
+      html = """<span style="background-color:#fdd;width:100%;" title="#{err.message}">#{html}</span>"""
+    listing.push html
+  [program, listing.join('<br>'), errors]
+
+evalPage = (page, steps, count) ->
+  return true unless count < steps.length
+  step = steps[count]
+  switch step.op
+    when 'ITEM'
+      count++
+      for item in page.story || []
+        if step.type == ''
+          return true if evalPart item, steps, count
+        else
+          if item.type is step.type
+            return true if evalPart item, steps, count
+      return false
+    when 'ACTION'
+      debugger
+      count++
+      for action in page.journal || []
+        if step.type == ''
+          return true if evalPart action, steps, count
+        else
+          if action.type is step.type
+            return true if evalPart action, steps, count
+      return false
+  evalPart page, steps, count
+
+evalPart = (part, steps, count) ->
+  return true unless count < steps.length
+  step = steps[count++]
+  switch step.op
+    when 'TEXT','TITLE','SITE'
+      key = step.op.toLowerCase()
+      return true if (part[key] || part.item?[key] || '').match step.regex
   false
 
-run = ($item) ->
+run = ($item, program) ->
 
   status = (text) ->
     $item.find('.caption').text text
 
-  status "waiting for sitemap"
+  want = (page) ->
+    evalPage page, program, 0
+
+  status "fetching sitemap"
   $.getJSON "http://#{location.host}/system/sitemap.json", (sitemap) ->
     checked = 0
     found = 0
@@ -35,17 +86,18 @@ run = ($item) ->
         status report
 
 emit = ($item, item) ->
+  [program, listing, errors] = parse item.text
   $item.append """
     <div style="background-color:#eee;padding:15px;">
-      #{wiki.resolveLinks item.text, parse}
-      <p class="caption">status here</p>
+      <div class=listing>#{listing}</div>
+      <p class="caption">#{errors} errors</p>
     </div>
   """
-  run $item
+  run $item, program unless errors
 
 bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
 
 window.plugins.grep = {emit, bind} if window?
-module.exports = {parse} if module?
+module.exports = {parse, evalPart, evalPage} if module?
 
