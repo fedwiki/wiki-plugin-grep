@@ -20,7 +20,7 @@ parse = (text) ->
       switch op
         when '' then
         when 'ITEM','ACTION' then program.push {op, type:word(arg)}
-        when 'TEXT','TITLE','SITE' then program.push {op, regex: new RegExp(arg,'mi')}
+        when 'TEXT','TITLE','SITE','ID','ALIAS','JSON' then program.push {op, regex: new RegExp(arg,'mi')}
         else throw {message:"don't know '#{op}' command"}
     catch err
       errors++
@@ -42,7 +42,6 @@ evalPage = (page, steps, count) ->
             return true if evalPart item, steps, count
       return false
     when 'ACTION'
-      debugger
       count++
       for action in page.journal || []
         if step.type == ''
@@ -57,9 +56,12 @@ evalPart = (part, steps, count) ->
   return true unless count < steps.length
   step = steps[count++]
   switch step.op
-    when 'TEXT','TITLE','SITE'
+    when 'TEXT','TITLE','SITE','ID','ALIAS'
       key = step.op.toLowerCase()
       return true if (part[key] || part.item?[key] || '').match step.regex
+    when 'JSON'
+      json = JSON.stringify part, null, ' '
+      return true if json.match step.regex
   false
 
 run = ($item, program) ->
