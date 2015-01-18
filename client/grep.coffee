@@ -79,7 +79,7 @@ run = ($item, program) ->
         text = "[[#{page.title}]] (#{page.story.length})"
         if want page
           found++
-          $item.append "#{wiki.resolveLinks text}<br>"
+          $item.find('.result').append "#{wiki.resolveLinks text}<br>"
         checked++
         report = "found #{found} pages of #{checked} checked"
         report += ", #{sitemap.length - checked} remain" if checked < sitemap.length
@@ -91,6 +91,7 @@ emit = ($item, item) ->
     <div style="background-color:#eee;padding:15px;">
       <div class=listing>#{listing}</div>
       <p class="caption">#{errors} errors</p>
+      <p class="result"></p>
     </div>
   """
   run $item, program unless errors
