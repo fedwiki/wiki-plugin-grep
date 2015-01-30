@@ -67,6 +67,21 @@
       "text": "Say __TITLE__ _pattern_ to match the page's title."
     },
     {
+      "type": "markdown",
+      "id": "995d4c7842c3cde8",
+      "text": "Say __ID__ _pattern_ to match the item's or action's id."
+    },
+    {
+      "type": "markdown",
+      "id": "63958f1a3caa5563",
+      "text": "Say __ALIAS__ _pattern_ to match the item's aliased id."
+    },
+    {
+      "type": "markdown",
+      "id": "6f57389b15374aa7",
+      "text": "Say __JSON__ _pattern_ to match any part's formatted json."
+    },
+    {
       "type": "paragraph",
       "id": "2f5c45633d9afd18",
       "text": "The pattern is formed by ordinary characters to be matched along with some special characters that add more options to the search."
@@ -592,6 +607,171 @@
         "text": "   ^  .  ?  *  [  ]  (  )  {  }  |  \\  $"
       },
       "date": 1420434973645
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "995d4c7842c3cde8"
+      },
+      "id": "995d4c7842c3cde8",
+      "type": "add",
+      "after": "d9ede14ad2682d82",
+      "date": 1421591244539
+    },
+    {
+      "type": "edit",
+      "id": "995d4c7842c3cde8",
+      "item": {
+        "type": "markdown",
+        "id": "995d4c7842c3cde8",
+        "text": "Say __ID__ _pattern_ to match the page's id."
+      },
+      "date": 1421591260487
+    },
+    {
+      "type": "edit",
+      "id": "995d4c7842c3cde8",
+      "item": {
+        "type": "markdown",
+        "id": "995d4c7842c3cde8",
+        "text": "Say __ID__ _pattern_ to match the item's or page's id."
+      },
+      "date": 1421591298635
+    },
+    {
+      "type": "move",
+      "order": [
+        "83932539d577f870",
+        "3e5ff90c65a0fa91",
+        "f8f6978002a99c62",
+        "aca96cb73989c407",
+        "157868c838c33a28",
+        "3f24a8ced0f09e24",
+        "6ad1523ec2f5b0f4",
+        "2e40362e882a7bf0",
+        "115a4f90bb85dfe6",
+        "e8c267cd812ff85d",
+        "2ff11389ff9c0252",
+        "8ae7936615d27cdb",
+        "3dad0991d0467aa9",
+        "995d4c7842c3cde8",
+        "2f5c45633d9afd18",
+        "e8cf912dd5dea591",
+        "d9ede14ad2682d82"
+      ],
+      "id": "995d4c7842c3cde8",
+      "date": 1421591320566
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "63958f1a3caa5563"
+      },
+      "id": "63958f1a3caa5563",
+      "type": "add",
+      "after": "d9ede14ad2682d82",
+      "date": 1421591349260
+    },
+    {
+      "type": "edit",
+      "id": "63958f1a3caa5563",
+      "item": {
+        "type": "markdown",
+        "id": "63958f1a3caa5563",
+        "text": "Say __ALIAS__ _pattern_ to match the item's alias."
+      },
+      "date": 1421591382861
+    },
+    {
+      "type": "move",
+      "order": [
+        "83932539d577f870",
+        "3e5ff90c65a0fa91",
+        "f8f6978002a99c62",
+        "aca96cb73989c407",
+        "157868c838c33a28",
+        "3f24a8ced0f09e24",
+        "6ad1523ec2f5b0f4",
+        "2e40362e882a7bf0",
+        "115a4f90bb85dfe6",
+        "e8c267cd812ff85d",
+        "2ff11389ff9c0252",
+        "8ae7936615d27cdb",
+        "3dad0991d0467aa9",
+        "995d4c7842c3cde8",
+        "63958f1a3caa5563",
+        "2f5c45633d9afd18",
+        "e8cf912dd5dea591",
+        "d9ede14ad2682d82"
+      ],
+      "id": "63958f1a3caa5563",
+      "date": 1421591393428
+    },
+    {
+      "type": "edit",
+      "id": "995d4c7842c3cde8",
+      "item": {
+        "type": "markdown",
+        "id": "995d4c7842c3cde8",
+        "text": "Say __ID__ _pattern_ to match the item's or action's id."
+      },
+      "date": 1421591405445
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6f57389b15374aa7"
+      },
+      "id": "6f57389b15374aa7",
+      "type": "add",
+      "after": "d9ede14ad2682d82",
+      "date": 1421591468594
+    },
+    {
+      "type": "edit",
+      "id": "6f57389b15374aa7",
+      "item": {
+        "type": "markdown",
+        "id": "6f57389b15374aa7",
+        "text": "Say __JSON__ _pattern_ to match any part's formatted json."
+      },
+      "date": 1421591546547
+    },
+    {
+      "type": "move",
+      "order": [
+        "83932539d577f870",
+        "3e5ff90c65a0fa91",
+        "f8f6978002a99c62",
+        "aca96cb73989c407",
+        "157868c838c33a28",
+        "3f24a8ced0f09e24",
+        "6ad1523ec2f5b0f4",
+        "2e40362e882a7bf0",
+        "115a4f90bb85dfe6",
+        "e8c267cd812ff85d",
+        "2ff11389ff9c0252",
+        "8ae7936615d27cdb",
+        "3dad0991d0467aa9",
+        "995d4c7842c3cde8",
+        "63958f1a3caa5563",
+        "6f57389b15374aa7",
+        "2f5c45633d9afd18",
+        "e8cf912dd5dea591",
+        "d9ede14ad2682d82"
+      ],
+      "id": "6f57389b15374aa7",
+      "date": 1421591552236
+    },
+    {
+      "type": "edit",
+      "id": "63958f1a3caa5563",
+      "item": {
+        "type": "markdown",
+        "id": "63958f1a3caa5563",
+        "text": "Say __ALIAS__ _pattern_ to match the item's aliased id."
+      },
+      "date": 1421591598216
     }
   ]
 }
