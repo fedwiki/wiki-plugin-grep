@@ -1,3 +1,9 @@
+###
+ * Federated Wiki : Grep Plugin
+ *
+ * Licensed under the MIT license.
+ * https://github.com/fedwiki/wiki-plugin-grep/blob/master/LICENSE.txt
+###
 
 escape = (line) ->
   line
@@ -103,4 +109,3 @@ bind = ($item, item) ->
 
 window.plugins.grep = {emit, bind} if window?
 module.exports = {parse, evalPart, evalPage} if module?
-
