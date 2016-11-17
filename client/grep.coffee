@@ -79,11 +79,11 @@ run = ($item, program) ->
     evalPage page, program, 0
 
   status "fetching sitemap"
-  $.getJSON "http://#{location.host}/system/sitemap.json", (sitemap) ->
+  $.getJSON "//#{location.host}/system/sitemap.json", (sitemap) ->
     checked = 0
     found = 0
     for place in sitemap
-      $.getJSON "http://#{location.host}/#{place.slug}.json", (page) ->
+      $.getJSON "//#{location.host}/#{place.slug}.json", (page) ->
         text = "[[#{page.title}]] (#{page.story.length})"
         if want page
           found++
