@@ -1,6 +1,6 @@
 {
   "name": "wiki-plugin-grep",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Federated Wiki - Grep Plugin",
   "keywords": [
     "grep",
