@@ -13,6 +13,11 @@
     },
     {
       "type": "paragraph",
+      "id": "a465975def8c370d",
+      "text": "Grep lists the pages that it finds. Click » to open them."
+    },
+    {
+      "type": "paragraph",
       "id": "1ee19086ebde9810",
       "text": "[[Grep for All Videos]] that use the new video plugin."
     },
@@ -252,6 +257,27 @@
         "text": "This plugin retrieves all pages from the origin server and creates links to those that satisfy conditions specified by a specialized markup. See [[About Grep Markup]]"
       },
       "date": 1420431687095
+    },
+    {
+      "type": "add",
+      "id": "a465975def8c370d",
+      "item": {
+        "type": "paragraph",
+        "id": "a465975def8c370d",
+        "text": "Grep lists the pages that it finds. Click » to open all found pages in the lineup."
+      },
+      "after": "b4c8615f53245ece",
+      "date": 1497140833655
+    },
+    {
+      "type": "edit",
+      "id": "a465975def8c370d",
+      "item": {
+        "type": "paragraph",
+        "id": "a465975def8c370d",
+        "text": "Grep lists the pages that it finds. Click » to open them."
+      },
+      "date": 1497140863599
     }
   ]
 }
