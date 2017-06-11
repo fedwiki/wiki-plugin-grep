@@ -97,15 +97,28 @@ emit = ($item, item) ->
   [program, listing, errors] = parse item.text
   $item.append """
     <div style="background-color:#eee;padding:15px;">
-      <div class=listing>#{listing}</div>
+      <div class=listing>#{listing} <a class=open href='#'>»</a></div>
       <p class="caption">#{errors} errors</p>
       <p class="result"></p>
     </div>
   """
   run $item, program unless errors
 
+
+open_all = (this_page, titles) ->
+  for title in titles
+    wiki.doInternalLink title, this_page
+    this_page = null
+
 bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
+  $item.find('a.open').click (e) ->
+    e.stopPropagation()
+    e.preventDefault()
+    this_page = $item.parents('.page') unless e.shiftKey
+    open_all this_page, $item.find('a.internal').map -> $(this).text()
+
+
 
 window.plugins.grep = {emit, bind} if window?
 module.exports = {parse, evalPart, evalPage} if module?
