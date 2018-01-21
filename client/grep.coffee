@@ -97,13 +97,14 @@ emit = ($item, item) ->
   [program, listing, errors] = parse item.text
   $item.append """
     <div style="background-color:#eee;padding:15px;">
-      <div class=listing>#{listing} <a class=open href='#'>»</a></div>
-      <p class="caption">#{errors} errors</p>
+      <div style="text-align:center">
+        <div class=listing>#{listing} <a class=open href='#'>»</a></div>
+        <button>find</button>
+        <p class="caption">#{errors} errors</p>
+      </div>
       <p class="result"></p>
     </div>
   """
-  run $item, program unless errors
-
 
 open_all = (this_page, titles) ->
   for title in titles
@@ -112,6 +113,9 @@ open_all = (this_page, titles) ->
 
 bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
+  $item.find('button').click (e) ->
+    [program, listing, errors] = parse item.text
+    run $item, program unless errors
   $item.find('a.open').click (e) ->
     e.stopPropagation()
     e.preventDefault()
