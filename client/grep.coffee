@@ -95,12 +95,13 @@ run = ($item, program) ->
 
 emit = ($item, item) ->
   [program, listing, errors] = parse item.text
+  caption = if errors then "#{errors} errors" else 'ready'
   $item.append """
     <div style="background-color:#eee;padding:15px;">
       <div style="text-align:center">
         <div class=listing>#{listing} <a class=open href='#'>»</a></div>
         <button>find</button>
-        <p class="caption">#{errors} errors</p>
+        <p class="caption">#{caption}</p>
       </div>
       <p class="result"></p>
     </div>
