@@ -97,7 +97,7 @@ emit = ($item, item) ->
   [program, listing, errors] = parse item.text
   caption = if errors then "#{errors} errors" else 'ready'
   $item.append """
-    <div style="background-color:#eee;padding:15px;">
+    <div style="background-color:#eee;padding:15px;margin:16px 0;">
       <div style="text-align:center">
         <div class=listing>#{listing} <a class=open href='#'>»</a></div>
         <button>find</button>
