@@ -113,11 +113,11 @@ open_all = (this_page, titles) ->
     this_page = null
 
 bind = ($item, item) ->
-  $item.dblclick -> wiki.textEditor $item, item
-  $item.find('button').click (e) ->
+  $item.on 'dblclick', () -> wiki.textEditor $item, item
+  $item.find('button').on 'click', (e) ->
     [program, listing, errors] = parse item.text
     run $item, program unless errors
-  $item.find('a.open').click (e) ->
+  $item.find('a.open').on 'click', (e) ->
     e.stopPropagation()
     e.preventDefault()
     this_page = $item.parents('.page') unless e.shiftKey
