@@ -1,12 +1,4 @@
 /*
-
-
-Convert this coffeescript into es2022
-
-Here's the converted ES2022 version of the provided CoffeeScript:
-*/
-
-/*
  * Federated Wiki : Grep Plugin
  *
  * Licensed under the MIT license.
@@ -97,10 +89,10 @@ const evalPart = (part, steps, count) => {
     case 'ID':
     case 'ALIAS':
       const key = step.op.toLowerCase();
-      return (part[key] || part.item?.[key] || '').match(step.regex);
+      if ((part[key] || part.item?.[key] || '').match(step.regex)) return true;
     case 'JSON':
       const json = JSON.stringify(part, null, ' ');
-      return json.match(step.regex);
+      if (json.match(step.regex)) return true;
     default:
       return false;
   }
@@ -116,10 +108,12 @@ const run = ($item, program) => {
   };
 
   status("fetching sitemap");
+  // this should change to use the site adapter
   $.getJSON(`//${location.host}/system/sitemap.json`, (sitemap) => {
     let checked = 0;
     let found = 0;
     for (const place of sitemap) {
+      // this should change to use the site adapter
       $.getJSON(`//${location.host}/${place.slug}.json`, (page) => {
         const text = `[[${page.title}]] (${page.story.length})`;
         if (want(page)) {
@@ -167,7 +161,7 @@ const bind = ($item, item) => {
     e.stopPropagation();
     e.preventDefault();
     const this_page = e.shiftKey ? null : $item.parents('.page');
-    open_all(this_page, $item.find('a.internal').map(function() { return $(this).text(); }).get());
+    open_all(this_page, $item.find('a.internal').map(function () { return $(this).text(); }));
   });
 };
 
@@ -178,17 +172,3 @@ if (typeof window !== 'undefined') {
 if (typeof module !== 'undefined') {
   module.exports = { parse, evalPart, evalPage };
 }
-
-/*
-This conversion includes the following changes:
-
-1. Arrow functions are used instead of the CoffeeScript `->` syntax.
-2. `let` and `const` are used for variable declarations.
-3. `for...of` loops are used instead of CoffeeScript's `for...in` for arrays.
-4. Template literals are used for string interpolation.
-5. The `?` optional chaining operator is used where appropriate.
-6. Class methods and object method shorthand syntax are used where applicable.
-7. The `export` and `import` syntax could be used for module exports, but I've kept the original CommonJS-style exports for compatibility.
-
-Note that this conversion assumes that the `$`, `wiki`, and other global variables are still available in the execution context. If you're moving to a module system, you might need to import these dependencies explicitly.
-*/
