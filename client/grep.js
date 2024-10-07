@@ -169,6 +169,4 @@ if (typeof window !== 'undefined') {
   window.plugins.grep = { emit, bind };
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = { parse, evalPart, evalPage };
-}
+export const grep = (typeof window == 'undefined') ? { parse, evalPart, evalPage } : undefined;

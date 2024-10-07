@@ -36,6 +36,7 @@
   "bugs": {
     "url": "https://github.com/fedwiki/wiki-plugin-grep/issues"
   },
+  "type": "module",
   "engines": {
     "node": ">=0.10"
   }
