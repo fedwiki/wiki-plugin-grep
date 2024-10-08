@@ -13,19 +13,17 @@
     "email": "ward@c2.com",
     "url": "http://ward.fed.wiki.org"
   },
-  "contributors": [],
+  "contributors": [
+    "Ward Cunningham <ward@c2.com>",
+    "Paul Rodwell <paul.rodwell@btinternet.com>"
+  ],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "update-authors": "node scripts/update-authors.cjs"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/preset-env": "^7.23.2",
     "expect.js": "*",
-    "grunt": "^1.0.4",
-    "grunt-contrib-coffee": "^2.1.0",
-    "grunt-contrib-watch": "^1.1.0",
     "grunt-git-authors": "^3.2.0",
-    "grunt-mocha-test": "^0.13.3",
     "mocha": "^10.0.0"
   },
   "license": "MIT",

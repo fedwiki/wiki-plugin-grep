@@ -5,9 +5,8 @@ This plugin, type: grep, extends the markup of the federated wiki.
 ## Build
 
     npm install
-    grunt build
+    npm test
 
 ## License
 
 MIT & GPL
-
